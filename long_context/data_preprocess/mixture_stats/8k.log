@@ -1,0 +1,66 @@
+Analyzing data mixture in: /capstor/store/cscs/swissai/infra01/users/ctianche/long-ctx-70B/data-mixture/8192
+Sequence length: 8192
+------------------------------------------------------------
+  institutional-books-filtered/dump-14/00000_tokens.bin: 1,726,482,077 tokens, 210,752 samples
+  institutional-books-filtered/dump-10/00000_tokens.bin: 1,719,312,623 tokens, 209,877 samples
+  institutional-books-filtered/dump-8/00000_tokens.bin: 1,730,624,418 tokens, 211,257 samples
+  institutional-books-filtered/dump-12/00000_tokens.bin: 1,703,264,216 tokens, 207,917 samples
+  phase5_datasets_symlinks/phase-5_swissai-fineweb-2-quality_10-filterrobots-merge/euro-high/dump-1-merged.bin: 12,543,798,476 tokens, 1,531,225 samples
+  phase5_datasets_symlinks/phase-5_swissai-fineweb-2-quality_10-filterrobots-merge/euro-high/dump-41-merged.bin: 12,596,153,292 tokens, 1,537,616 samples
+  phase5_datasets_symlinks/stackv1_threshold_3/dump-0-merged.bin: 7,788,024,105 tokens, 950,686 samples
+  phase5_datasets_symlinks/stackv1_threshold_3/dump-1-merged.bin: 6,439,237,950 tokens, 786,039 samples
+  phase5_datasets_symlinks/phase-5_clean-wikipedia/dump-0/00000_tokens.bin: 1,818,711,393 tokens, 222,010 samples
+  phase5_datasets_symlinks/phase-5_parallel-v2/paradocs-bidirectional-piifiltered/dump-0/00014_tokens.bin: 422,457,934 tokens, 51,569 samples
+  phase5_datasets_symlinks/phase-5_parallel-v2/paradocs-bidirectional-piifiltered/dump-0/00019_tokens.bin: 210,938,518 tokens, 25,749 samples
+  phase5_datasets_symlinks/phase-5_parallel-v2/paradocs-bidirectional-piifiltered/dump-0/00004_tokens.bin: 706,503,330 tokens, 86,243 samples
+  phase5_datasets_symlinks/phase-5_parallel-v2/paradocs-bidirectional-piifiltered/dump-0/00009_tokens.bin: 657,470,774 tokens, 80,257 samples
+  phase5_datasets_symlinks/phase-5_parallel-v2/swissai-europarl-helsinki-nlp-bidirectional-preprocessed/dump-0/00012_tokens.bin: 458,175,954 tokens, 55,929 samples
+  phase5_datasets_symlinks/phase-5_parallel-v2/swissai-europarl-helsinki-nlp-bidirectional-preprocessed/dump-0/00003_tokens.bin: 502,653,476 tokens, 61,359 samples
+  phase5_datasets_symlinks/phase-5_parallel-v2/swissai-europarl-helsinki-nlp-bidirectional-preprocessed/dump-0/00000_tokens.bin: 510,193,258 tokens, 62,279 samples
+  phase5_datasets_symlinks/phase-5_parallel-v2/swissai-europarl-helsinki-nlp-bidirectional-preprocessed/dump-0/00015_tokens.bin: 451,712,804 tokens, 55,140 samples
+  phase5_datasets_symlinks/stackv2_threshold_0/swissai-tokenizer/stackv2/threshold_0-merge/dump-0-merged.bin: 10,609,984,523 tokens, 1,295,164 samples
+  phase5_datasets_symlinks/triplicate_provenance-flan-single-replica-2/dump-0/00002_tokens.bin: 85,139,670 tokens, 10,393 samples
+  8192/fw2/dump-1/00000_tokens.bin: 3,069,553,316 tokens, 374,701 samples
+  8192/fw2/dump-5/00000_tokens.bin: 3,173,203,586 tokens, 387,353 samples
+  8192/fw1/dump-27/00003_tokens.bin: 435,790,970 tokens, 53,197 samples
+  8192/fw1/dump-27/00001_tokens.bin: 874,636,754 tokens, 106,767 samples
+  8192/fw1/dump-15/00002_tokens.bin: 438,415,361 tokens, 53,517 samples
+  8192/fw1/dump-15/00003_tokens.bin: 437,050,934 tokens, 53,350 samples
+  8192/fw1/dump-0/00000_tokens.bin: 890,261,536 tokens, 108,674 samples
+  8192/fw1/dump-18/00002_tokens.bin: 438,597,175 tokens, 53,539 samples
+  8192/fw1/dump-18/00001_tokens.bin: 873,215,230 tokens, 106,593 samples
+  8192/fw1/dump-3/00002_tokens.bin: 437,528,407 tokens, 53,409 samples
+  8192/fw1/dump-10/00002_tokens.bin: 438,189,945 tokens, 53,489 samples
+  8192/fw1/dump-25/00001_tokens.bin: 874,464,260 tokens, 106,746 samples
+  8192/fw1/dump-38/00001_tokens.bin: 872,048,796 tokens, 106,451 samples
+  8192/fw1/dump-5/00003_tokens.bin: 434,033,865 tokens, 52,982 samples
+  8192/fw1/dump-5/00001_tokens.bin: 871,759,787 tokens, 106,415 samples
+  8192/fw1/dump-26/00002_tokens.bin: 440,339,633 tokens, 53,752 samples
+  8192/fw1/dump-22/00001_tokens.bin: 873,090,282 tokens, 106,578 samples
+------------------------------------------------------------
+GROUP STATISTICS:
+------------------------------------------------------------
+  phase5_datasets_symlinks:
+    Tokens: 55,801,155,457 (71.0%)
+    Samples: 6,811,658
+    Files: 15
+    Avg tokens per sample: 8,192.0
+
+  8192:
+    Tokens: 15,872,179,837 (20.2%)
+    Samples: 1,937,513
+    Files: 17
+    Avg tokens per sample: 8,192.0
+
+  institutional-books-filtered:
+    Tokens: 6,879,683,334 (8.8%)
+    Samples: 839,803
+    Files: 4
+    Avg tokens per sample: 8,192.0
+
+------------------------------------------------------------
+SUMMARY:
+  Total tokens: 78,553,018,628
+  Total samples: 9,588,974
+  Tokens per sample: 8,192.0
+  Number of groups: 3

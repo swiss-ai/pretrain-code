@@ -1,0 +1,52 @@
+Analyzing data mixture in: /capstor/store/cscs/swissai/infra01/users/ctianche/long-ctx-70B/data-mixture/16384
+Sequence length: 16384
+------------------------------------------------------------
+  institutional-books-filtered/dump-4/00000_tokens.bin: 1,708,002,573 tokens, 104,248 samples
+  institutional-books-filtered/dump-11/00000_tokens.bin: 1,738,082,327 tokens, 106,084 samples
+  institutional-books-filtered/dump-13/00000_tokens.bin: 1,705,377,327 tokens, 104,087 samples
+  phase5_datasets_symlinks/phase-5_swissai-fineweb-2-quality_10-filterrobots-merge/other-high/dump-20-merged.bin: 12,014,655,683 tokens, 733,316 samples
+  phase5_datasets_symlinks/phase-5_swissai-fineweb-2-quality_10-filterrobots-merge/euro-high/dump-0-merged.bin: 12,598,765,177 tokens, 768,967 samples
+  phase5_datasets_symlinks/phase-5_clean-wikipedia/dump-0/00016_tokens.bin: 1,523,768,552 tokens, 93,003 samples
+  phase5_datasets_symlinks/phase-5_parallel-v2/paradocs-bidirectional-piifiltered/dump-0/00011_tokens.bin: 674,536,524 tokens, 41,170 samples
+  phase5_datasets_symlinks/phase-5_parallel-v2/paradocs-bidirectional-piifiltered/dump-0/00018_tokens.bin: 274,406,325 tokens, 16,748 samples
+  phase5_datasets_symlinks/phase-5_parallel-v2/swissai-europarl-helsinki-nlp-bidirectional-preprocessed/dump-0/00018_tokens.bin: 443,513,624 tokens, 27,069 samples
+  phase5_datasets_symlinks/phase-5_parallel-v2/swissai-europarl-helsinki-nlp-bidirectional-preprocessed/dump-0/00013_tokens.bin: 467,047,989 tokens, 28,506 samples
+  phase5_datasets_symlinks/phase-5_parallel-v2/swissai-europarl-helsinki-nlp-bidirectional-preprocessed/dump-0/00017_tokens.bin: 438,525,968 tokens, 26,765 samples
+  phase5_datasets_symlinks/triplicate_euroblocks-templated-1/dump-0/00000_tokens.bin: 194,847,756 tokens, 11,892 samples
+  phase5_datasets_symlinks/stackv2_threshold_0/swissai-tokenizer/stackv2/threshold_0-merge/dump-5-merged.bin: 6,975,539,072 tokens, 425,753 samples
+  phase5_datasets_symlinks/stackv2_threshold_0/swissai-tokenizer/stackv2/threshold_0-merge/dump-3-merged.bin: 5,465,360,431 tokens, 333,579 samples
+  phase5_datasets_symlinks/triplicate_provenance-flan-single-replica-3/dump-0/00001_tokens.bin: 242,279,541 tokens, 14,787 samples
+  16384/fw2/dump-0/00000_tokens.bin: 3,111,162,379 tokens, 189,890 samples
+  16384/fw1/dump-14/00000_tokens.bin: 1,684,268,956 tokens, 102,799 samples
+  16384/fw1/dump-18/00000_tokens.bin: 1,412,534,515 tokens, 86,214 samples
+  16384/fw1/dump-19/00001_tokens.bin: 1,401,218,827 tokens, 85,523 samples
+  16384/fw1/dump-20/00000_tokens.bin: 1,413,547,715 tokens, 86,276 samples
+  16384/fw1/dump-8/00001_tokens.bin: 1,401,089,979 tokens, 85,515 samples
+  16384/fw1/dump-24/00001_tokens.bin: 1,402,709,247 tokens, 85,614 samples
+------------------------------------------------------------
+GROUP STATISTICS:
+------------------------------------------------------------
+  phase5_datasets_symlinks:
+    Tokens: 41,313,246,642 (70.9%)
+    Samples: 2,521,555
+    Files: 12
+    Avg tokens per sample: 16,384.0
+
+  16384:
+    Tokens: 11,826,531,618 (20.3%)
+    Samples: 721,831
+    Files: 7
+    Avg tokens per sample: 16,384.1
+
+  institutional-books-filtered:
+    Tokens: 5,151,462,227 (8.8%)
+    Samples: 314,419
+    Files: 3
+    Avg tokens per sample: 16,384.1
+
+------------------------------------------------------------
+SUMMARY:
+  Total tokens: 58,291,240,487
+  Total samples: 3,557,805
+  Tokens per sample: 16,384.0
+  Number of groups: 3

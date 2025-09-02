@@ -1,0 +1,42 @@
+Analyzing data mixture in: /capstor/store/cscs/swissai/infra01/users/ctianche/long-ctx-70B/data-mixture/65536_30b
+Sequence length: 65536
+------------------------------------------------------------
+  institutional-books-filtered/dump-3/00000_tokens.bin: 1,477,161,568 tokens, 22,539 samples
+  institutional-books-filtered/dump-1/00000_tokens.bin: 1,484,323,485 tokens, 22,648 samples
+  phase5_datasets_symlinks/phase-5_swissai-fineweb-2-quality_10-filterrobots-merge/euro-mid/dump-0-merged-split-1.bin: 3,543,106,552 tokens, 54,063 samples
+  phase5_datasets_symlinks/phase-5_swissai-fineweb-2-quality_10-filterrobots-merge/euro-high/dump-26-merged.bin: 12,212,127,413 tokens, 186,342 samples
+  phase5_datasets_symlinks/phase-5_clean-wikipedia/dump-0/00005_tokens.bin: 1,611,061,678 tokens, 24,582 samples
+  phase5_datasets_symlinks/phase-5_clean-wikipedia/dump-0/00015_tokens.bin: 1,497,607,014 tokens, 22,851 samples
+  phase5_datasets_symlinks/phase-5_parallel-v2/swissai-europarl-helsinki-nlp-bidirectional-preprocessed/dump-0/00014_tokens.bin: 437,445,488 tokens, 6,674 samples
+  phase5_datasets_symlinks/phase-5_parallel-v2/swissai-europarl-helsinki-nlp-bidirectional-preprocessed/dump-0/00019_tokens.bin: 445,977,964 tokens, 6,805 samples
+  phase5_datasets_symlinks/phase-5_parallel-v2/swissai-europarl-helsinki-nlp-bidirectional-preprocessed/dump-0/00005_tokens.bin: 480,839,036 tokens, 7,337 samples
+  phase5_datasets_symlinks/triplicate_provenance-flan-single-replica-1/dump-0/00000_tokens.bin: 508,083,339 tokens, 7,752 samples
+  65536/fw2/dump-3/00000_tokens.bin: 2,972,152,202 tokens, 45,351 samples
+  65536/fw1/dump-2/00000_tokens.bin: 2,606,159,827 tokens, 39,766 samples
+------------------------------------------------------------
+GROUP STATISTICS:
+------------------------------------------------------------
+  phase5_datasets_symlinks:
+    Tokens: 20,736,248,484 (70.8%)
+    Samples: 316,406
+    Files: 8
+    Avg tokens per sample: 65,536.8
+
+  65536:
+    Tokens: 5,578,312,029 (19.1%)
+    Samples: 85,117
+    Files: 2
+    Avg tokens per sample: 65,537.0
+
+  institutional-books-filtered:
+    Tokens: 2,961,485,053 (10.1%)
+    Samples: 45,187
+    Files: 2
+    Avg tokens per sample: 65,538.4
+
+------------------------------------------------------------
+SUMMARY:
+  Total tokens: 29,276,045,566
+  Total samples: 446,710
+  Tokens per sample: 65,537.0
+  Number of groups: 3
