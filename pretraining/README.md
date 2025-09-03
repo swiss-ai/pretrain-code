@@ -5,7 +5,7 @@ The shared scripts are slurm submission scripts, they should be adapted to run w
 Before running the scripts, please make sure to follow the following steps.
 - Download and tokenize the data needed for all five stages of training (see https://github.com/swiss-ai/pretrain-data).
 - Have a working ngc-pytorch 25.05 container.
-  We provide the Dockerfile and environment used in our runs under `../container/`.
+  We provide the Dockerfile used in our runs under `../container/`.
 - Clone the Megatron-LM training codebase: https://github.com/swiss-ai/Megatron-LM.
 - Replace the following environment variables on each of the `submit_apertus_*b.sh` scripts according to your setup:
   ```

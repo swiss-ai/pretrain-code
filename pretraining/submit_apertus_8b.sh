@@ -9,7 +9,6 @@
 #SBATCH --gpus-per-node=4
 #SBATCH --cpus-per-task=36 
 #SBATCH --mem=460000
-#SBATCH --environment=./container/env.toml
 #SBATCH --signal=SIGUSR2@600  # Send SIGUSR2 600 seconds before hitting the time limit to save a checkpoint and exit.
 #SBATCH --no-requeue  # Prevent Slurm to requeue the job if the execution crashes (e.g. node failure) so we don't loose the logs.
 #SBATCH -C thp_never&nvidia_vboost_enabled
@@ -156,6 +155,13 @@ export TORCH_NCCL_AVOID_RECORD_STREAMS=1
 export TORCH_NCCL_ASYNC_ERROR_HANDLING=1
 export CUDA_DEVICE_MAX_CONNECTIONS=1
 export OMP_NUM_THREADS=$SLURM_CPUS_PER_TASK
+
+export FI_CXI_DEFAULT_TX_SIZE=16384
+export NCCL_NET_FORCE_FLUSH=1
+export FI_CXI_RDZV_GET_MIN=0
+export FI_CXI_SAFE_DEVMEM_COPY_THRESHOLD=16777216
+export NCCL_RAS_ENABLE=0
+export CUDA_CACHE_DISABLE=1
 
 # We are preparing for torch.distributed programs so it wants:
 # - MASTER_ADDR, MASTER_PORT, WORLD_SIZE - already known before `srun`
