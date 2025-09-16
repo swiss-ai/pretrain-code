@@ -1,4 +1,4 @@
-Analyzing data mixture in: /capstor/store/cscs/swissai/infra01/users/ctianche/long-ctx-70B/data-mixture/65536_30b
+Analyzing data mixture in: /PATH/TO/long-ctx/data-mixture/65536_30b
 Sequence length: 65536
 ------------------------------------------------------------
   institutional-books-filtered/dump-3/00000_tokens.bin: 1,477,161,568 tokens, 22,539 samples

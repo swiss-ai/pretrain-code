@@ -1,29 +1,14 @@
 #!/bin/bash
 
-# Get the directory where this script is located
-SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-
-# Define the log file in the same directory
-LOG_FILE="$SCRIPT_DIR/create_mixture.log"
-
-# Redirect both stdout and stderr to the log file (and also to terminal)
-exec > >(tee -a "$LOG_FILE") 2>&1
-
-
-MIXTURE_CREATE_SCRIPT=/capstor/scratch/cscs/ctianche/swissai_long_context/framework_prepare/Megatron-LM/scripts/tools/create_data_mixture_v2.py
-MIXTURE_CHECK_SCRIPT=/capstor/store/cscs/swissai/infra01/users/ctianche/long-context-mixture/calculate_mixture_size.py
-
-PYTHON_ACTIVATE_PATH=/capstor/scratch/cscs/ctianche/swissai_long_context/.venv/bin/activate
-
-source $PYTHON_ACTIVATE_PATH
+MIXTURE_CREATE_SCRIPT=/PATH/TO/Megatron-LM/scripts/tools/create_data_mixture_v2.py
+MIXTURE_CHECK_SCRIPT=/PATH/TO/long-context-mixture/calculate_mixture_size.py
 
 # 70% phase 5, 20% fw long, 10% book
-PHASE_5_DIR=/capstor/store/cscs/swissai/infra01/users/ctianche/long-context-mixture/phase5_datasets_symlinks
-FW_LONG_DIR=/capstor/store/cscs/swissai/infra01/users/ctianche/long-context-mixture/fw12_long_symlinks
-BOOK_DIR=/capstor/store/cscs/swissai/infra01/users/ctianche/long-context-tokenized/institutional-books-filtered
-SWISSDATA_DIR=/capstor/store/cscs/swissai/infra01/users/ctianche/long-context-tokenized/commercial-swiss-data-with-entscheidungsuche-half
+PHASE_5_DIR=/PATH/TO/long-context-mixture/phase5_datasets_symlinks
+FW_LONG_DIR=/PATH/TO/long-context-mixture/fw12_long_symlinks
+BOOK_DIR=/PATH/TO/long-context-tokenized/institutional-books-filtered
 
-OUTPUT_BASE_DIR=/capstor/store/cscs/swissai/infra01/users/ctianche/long-ctx-70B/data-mixture
+OUTPUT_BASE_DIR=/PATH/TO/long-ctx/data-mixture
 
 # 8k mixture (80B)
 # remove existing files

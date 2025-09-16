@@ -3,15 +3,15 @@
 #SBATCH --account=a-infra01-1
 #SBATCH --time=12:00:00
 #SBATCH --job-name=70b-16k
-#SBATCH --output=/capstor/store/cscs/swissai/infra01/users/ctianche/long-ctx-70B-runs/slurm_logs/%x-%j.out
-#SBATCH --error=/capstor/store/cscs/swissai/infra01/users/ctianche/long-ctx-70B-runs/slurm_logs/%x-%j.err
+#SBATCH --output=/PATH/TO/long-ctx-70B-runs/slurm_logs/%x-%j.out
+#SBATCH --error=/PATH/TO/long-ctx-70B-runs/slurm_logs/%x-%j.err
 #SBATCH --partition=normal
 #SBATCH --nodes=512
 #SBATCH --ntasks-per-node=4
 #SBATCH --gpus-per-node=4
 #SBATCH --cpus-per-task=36 
 #SBATCH --mem=460000
-#SBATCH --environment=/iopsstor/scratch/cscs/asolergi/new-toml-v2.toml # Vanilla 25.01 PyTorch NGC Image 
+#SBATCH --environment=/PATH/TO/NGC25_01.toml # Vanilla 25.01 PyTorch NGC Image 
 #SBATCH --signal=SIGUSR2@600	# Send SIGUSR2 600 seconds before hitting the time limit
 #SBATCH --no-requeue	# Prevent Slurm to requeue the job if the execution crashes (e.g. node failure) so we don't loose the logs
 #SBATCH -C thp_never&nvidia_vboost_enabled
@@ -21,7 +21,7 @@ echo "START TIME: $(date)"
 
 ################ Configs ################
 # NOTE(tj.solergibert) Check the `Data` section in the README. Use `,` to specify multiple datasets e.g. "/path/to/dataset/A,/path/to/dataset/B,/path/to/dataset/C"
-DATASETS="/capstor/store/cscs/swissai/infra01/users/ctianche/long-ctx-70B/data-mixture/16384"
+DATASETS="/PATH/TO/long-ctx/data-mixture/16384"
 
 # This config trains with 2048 * 4096 = 8_388_608 tokens per batch.
 # 2048 / 1 = 2048 forward passes
@@ -42,17 +42,17 @@ MOCK_DATA=false # Set to `true` to use mock data
 ###################
 
 # Megatron source and dataset cache
-MEGATRON_LM_DIR=/capstor/scratch/cscs/ctianche/swissai_long_context/main_run/Megatron-LM
-DATASET_CACHE_DIR=/iopsstor/scratch/cscs/ctianche/tmp/dataset_cache
+MEGATRON_LM_DIR=/PATH/TO/Megatron-LM
+DATASET_CACHE_DIR=$SCRATCH/.tmp/dataset_cache
 BACKUP_CODEBASE=false # Set to `true` to copy the codebase to the experiment folder and re-use it across runs
 
 # Logging directories & artifacts
 PROJECT_NAME=main-long-ctx-runs-70b-v1
 EXP_NAME=apertus3-70b-16k-512nodes
-PROJECT_DIR=/capstor/store/cscs/swissai/infra01/users/ctianche/long-ctx-70B-runs/Meg_Runs/$PROJECT_NAME
+PROJECT_DIR=/PATH/TO/long-ctx-70B-runs/Meg_Runs/$PROJECT_NAME
 
 #########################################
-LOAD_DIR=/capstor/store/cscs/swissai/infra01/users/ctianche/long-ctx-70B-runs/Meg_Runs/main-long-ctx-runs-70b-v1/apertus3-70b-8k-512nodes/checkpoints
+LOAD_DIR=/PATH/TO/8K_LONG_CTX_CKPT_70B
 
 EXP_DIR=$PROJECT_DIR/$EXP_NAME
 TORCH_INDUCTOR_CACHE_DIR=/workspace/torch_compile_cache/$SLURM_JOB_ID
