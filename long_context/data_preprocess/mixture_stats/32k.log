@@ -1,0 +1,45 @@
+Analyzing data mixture in: /PATH/TO/long-ctx/data-mixture/32768
+Sequence length: 32768
+------------------------------------------------------------
+  32768/fw2/dump-5/00000_tokens.bin: 3,525,630,905 tokens, 107,593 samples
+  32768/fw1/dump-10/00000_tokens.bin: 2,932,904,632 tokens, 89,505 samples
+  institutional-books-filtered/dump-15/00000_tokens.bin: 1,712,000,439 tokens, 52,246 samples
+  institutional-books-filtered/dump-7/00000_tokens.bin: 1,725,627,567 tokens, 52,661 samples
+  phase5_datasets_symlinks/stackv1_threshold_2/dump-6-merged.bin: 8,847,965,477 tokens, 270,018 samples
+  phase5_datasets_symlinks/phase-5_swissai-fineweb-2-quality_10-filterrobots-merge/other-high/dump-16-merged.bin: 12,562,970,780 tokens, 383,391 samples
+  phase5_datasets_symlinks/phase-5_clean-wikipedia/dump-0/00014_tokens.bin: 1,441,573,398 tokens, 43,993 samples
+  phase5_datasets_symlinks/phase-5_clean-wikipedia/dump-0/00018_tokens.bin: 1,423,576,082 tokens, 43,444 samples
+  phase5_datasets_symlinks/phase-5_clean-wikipedia/dump-0/00013_tokens.bin: 1,501,520,092 tokens, 45,822 samples
+  phase5_datasets_symlinks/phase-5_parallel-v2/paradocs-bidirectional-piifiltered/dump-0/00016_tokens.bin: 553,818,958 tokens, 16,901 samples
+  phase5_datasets_symlinks/phase-5_parallel-v2/swissai-europarl-helsinki-nlp-bidirectional-preprocessed/dump-0/00011_tokens.bin: 441,383,307 tokens, 13,469 samples
+  phase5_datasets_symlinks/phase-5_parallel-v2/swissai-europarl-helsinki-nlp-bidirectional-preprocessed/dump-0/00008_tokens.bin: 478,351,108 tokens, 14,598 samples
+  phase5_datasets_symlinks/triplicate_provenance-flan-single-replica-1/dump-0/00002_tokens.bin: 85,139,670 tokens, 2,598 samples
+  phase5_datasets_symlinks/triplicate_euroblocks-templated-2/dump-0/00000_tokens.bin: 194,847,756 tokens, 5,946 samples
+  phase5_datasets_symlinks/triplicate_provenance-flan-single-replica-3/dump-0/00000_tokens.bin: 508,083,339 tokens, 15,505 samples
+------------------------------------------------------------
+GROUP STATISTICS:
+------------------------------------------------------------
+  phase5_datasets_symlinks:
+    Tokens: 28,039,229,967 (73.9%)
+    Samples: 855,685
+    Files: 11
+    Avg tokens per sample: 32,768.2
+
+  32768:
+    Tokens: 6,458,535,537 (17.0%)
+    Samples: 197,098
+    Files: 2
+    Avg tokens per sample: 32,768.1
+
+  institutional-books-filtered:
+    Tokens: 3,437,628,006 (9.1%)
+    Samples: 104,907
+    Files: 2
+    Avg tokens per sample: 32,768.3
+
+------------------------------------------------------------
+SUMMARY:
+  Total tokens: 37,935,393,510
+  Total samples: 1,157,690
+  Tokens per sample: 32,768.2
+  Number of groups: 3
