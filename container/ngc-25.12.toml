@@ -1,0 +1,15 @@
+image = "jfrog.svc.cscs.ch/docker-group-csstaff/alps-images/ngc-pytorch:25.12-py3-alps2"
+
+mounts = ["CHANGE_THIS"]
+
+writable = true
+
+[env]
+PMIX_MCA_psec = "native"
+FI_MR_CACHE_MAX_SIZE = "-1"
+FI_MR_CACHE_MAX_COUNT = "524288"
+FI_CXI_SAFE_DEVMEM_COPY_THRESHOLD = "16777216"
+FI_MR_CACHE_MONITOR = "userfaultfd"
+
+[annotations]
+com.hooks.cxi.enabled = "false"
